@@ -1,0 +1,17 @@
+ReportEx.StartCode | Report Example
+proc report data=sashelp.cars;
+  column origin type msrp;`\CallOut{1}~
+  define origin / group 'Origin';`\CallOut{2}~
+  define type / group;
+  define msrp / mean`\CallOut{3}~ format=dollar12.2`\CallOut{4}~;
+run;
+EndCode
+%<*ReportEx.Enumerate>
+\item The COLUMN statment chooses or defines columns.
+\item DEFINE statements set roles and attributes for columns.
+GROUP acts like CLASS in MEANS, quoted text becomes
+the column label.
+\item Stat keywords are available for numeric summaries,
+similar to MEANS.
+\item Formats can be set with FORMAT= .
+%</ReportEx.Enumerate>
