@@ -1,0 +1,27 @@
+\documentclass{book}
+\usepackage{SASBookStyle}
+\numberwithin{equation}{section}
+
+%this stuff is for single chapter publishing only...
+\titleformat{\chapter}[hang] 
+{\normalfont\huge\bfseries\sffamily\color{prgHeadBlue}}
+{}{0pt}{\Large}
+\renewcommand*\thesection{\arabic{section}}
+%remove when assembling into book...
+
+\begin{document}
+\chapter*{Sample SAS Technical Documentation Using GitHub and Overleaf}
+%\begingroup
+\startcontents[chapters]
+\printcontents[chapters]{ }{1}{}
+%\endgroup
+% Put chapter TOC at start of chapter
+
+\section{Introduction}
+\label{Section:SESUGIntro}
+This document shows some simple examples of SAS code, callouts, and output integrated into a LaTeX document using a GitHub repository.
+
+\section{Examples}
+\label{Section:SESUGExamples}
+
+\end{document}
